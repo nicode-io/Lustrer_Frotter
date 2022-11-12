@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATED_IDENTITY_EQUALS")
-
 package io.nicode.a1_first_app
 
 fun main() {
@@ -80,7 +78,7 @@ fun main() {
 // When statement (switch)
     var season = 3
 
-    when(season) {
+    when (season) {
         1 -> println("Spring")
         2 -> println("Summer")
         3 -> {
@@ -92,7 +90,7 @@ fun main() {
     }
 
     var month = 3
-    when(month){
+    when (month) {
         in 3..5 -> println("Spring")
         in 6..8 -> println("Summer")
         in 9..11 -> println("Fall")
@@ -106,7 +104,7 @@ fun main() {
 
     // While loop
     var x = 1
-    while(x <= 10) {
+    while (x <= 10) {
         println("$x")
         x++
     }
@@ -133,7 +131,7 @@ fun main() {
         println("$num")
     }
 
-// Functions
+    // Functions
     fun addUp(a: Int, b: Int): Int {
         return a + b;
     }
@@ -150,7 +148,7 @@ fun main() {
     var len2 = nullableName?.length // -> OK, will store "null" as value
 
     // Safe call operator
-    nullableName?.let { println(nullableName.length)} // execute only if value is not null
+    nullableName?.let { println(nullableName.length) } // execute only if value is not null
 
     // Elvis operator
     val name = nullableName ?: "Guest" // Will get nullableName value if not null else Guest
@@ -159,10 +157,15 @@ fun main() {
 
     // val myAge: String? = nullableName?.husband?.age ?: 0 chain multiple condition, if not met will result in 0
 
+// List & Typecasting
+    val stringList: List<String> = listOf("Nicode", "Breaking", "Learning", "Path")
+    val mixedTypeList: List<Any> = listOf("String", 42, 54.00, true)
+
+    val myMixed: Any = 1337
+    // val notSureString: String? = myMixed as? String // Won't work
+    // println(notSureString) -> will always send en exception
+    val sureString: String? = myMixed as? String
+    println(sureString)
 }
 
 
-
-class KotlinBasics {
-
-}
