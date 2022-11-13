@@ -1,3 +1,9 @@
-<resources>
-    <string name="app_name">002-age_minute_calculator</string>
+ <resources>
+    <string name="app_name">AMC - Age In Minutes</string>
+    <string name="calculate_your">CALCULATE YOUR</string>
+    <string name="age">AGE</string>
+    <string name="in_minutes">IN MINUTES</string>
+    <string name="select_date">SELECT DATE</string>
+    <string name="selected_date">Selected Date</string>
+    <string name="minutes_till_born">Minutes till born</string>
 </resources>
